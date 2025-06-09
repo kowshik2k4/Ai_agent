@@ -10,34 +10,9 @@ import requests
 import constants
 import json
 
-API_KEY = st.secrets["NEWS_API_KEY"]
+# API_KEY = st.secrets["NEWS_API_KEY"]
 countries = constants.countries
 
-
-def business_news_feed():
-    select_country = st.sidebar.selectbox("Select Country: ", countries.keys())
-    st.header('NEWS FEED')
-    r = requests.get('https://newsapi.org/v2/top-headlines?country=' + countries[
-        select_country] + '&category=business&apikey=' + API_KEY)
-    data_news = json.loads(r.content)
-    length = min(15, len(data_news['articles']))
-    for i in range(length):
-        news = data_news['articles'][i]['title']
-        st.subheader(news)
-
-        image = data_news['articles'][i]['urlToImage']
-        try:
-            st.image(image)
-        except:
-            pass
-        else:
-            pass
-
-        content = data_news['articles'][i]['content']
-        st.write(content)
-
-        url = data_news['articles'][i]['url']
-        st.write(url)
 
 
 def isLeapYear(y):
@@ -178,7 +153,7 @@ year = int(TODAY[: 4])
 st.title('STOCKIFY: STOCK FORECAST APP')
 
 try:
-    option = st.sidebar.selectbox("Which Dashboard?", ('Past Trends', 'Predict Stock Price', 'Trending Business News'),
+    option = st.sidebar.selectbox("Which Dashboard?", ('Past Trends', 'Predict Stock Price'),
                                   0)
     stock = st.sidebar.text_input("Symbol", value='GOOG')
     selected_stock = stock
@@ -200,8 +175,7 @@ try:
         populateSideBar()
         predictingTheStockPrices()
 
-    if option == 'Trending Business News':
-        business_news_feed()
+  
 
 except KeyError:
     st.error('This company is not listed !')
