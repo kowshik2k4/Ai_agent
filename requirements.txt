@@ -6,4 +6,3 @@ click==8
 pandas>=1.0.4
 datetime~=4.4
 
-yahooquery==2.3.7
