@@ -1,5 +1,5 @@
 # 💬 AI Agent for Stock Market Prediction
-TalentScout Hiring Assistant is a smart, conversational AI-powered hiring assistant designed to streamline the initial technical screening process for candidates in tech roles. Built with Streamlit and integrated with LLMs (Large Language Models), this chatbot interacts with candidates, gathers their personal and professional details, and dynamically generates tailored technical questions based on their declared tech stack using Gemini 2.5 Flash
+This AI agent leverages historical stock market data fetched via the yfinance library to perform accurate and insightful stock price forecasting. Utilizing fbprophet — a powerful time series forecasting tool developed by Facebook — the agent models trends, seasonality, and market cycles to predict future stock prices with high precision.
 
 [![Open in Streamlit]Coming soon
 
