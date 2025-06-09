@@ -1,7 +1,7 @@
 # 💬 AI Agent for Stock Market Prediction
 This AI agent leverages historical stock market data fetched via the yfinance library to perform accurate and insightful stock price forecasting. Utilizing fbprophet — a powerful time series forecasting tool developed by Facebook — the agent models trends, seasonality, and market cycles to predict future stock prices with high precision.
 
-[![Open in Streamlit]Coming soon
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://orange-winner-jxwj5jjjp5xfpw99.github.dev/)
 
 ### How to run it on your own machine
 Script will run by itself on any code editor
